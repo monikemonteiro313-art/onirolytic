@@ -58,15 +58,15 @@ html, body {
   border-radius: 50% !important;
   background: #22d3ee !important;
   filter: blur(90px) !important;
-  opacity: 0.17 !important;
+  opacity: 0.19 !important;
   pointer-events: none !important;
   z-index: 0 !important;
   animation: onirolytic-aura-pulse 8s ease-in-out infinite alternate !important;
 }
 
 @keyframes onirolytic-aura-pulse {
-  0% { transform: translate(-50%, 0) scale(0.95); opacity: 0.13 !important; }
-  100% { transform: translate(-50%, 5px) scale(1.05); opacity: 0.19 !important; }
+  0% { transform: translate(-50%, 0) scale(0.95); opacity: 0.15 !important; }
+  100% { transform: translate(-50%, 5px) scale(1.05); opacity: 0.22 !important; }
 }
 
 .onirolytic-card-container {
@@ -74,7 +74,7 @@ html, body {
   z-index: 2 !important;
   max-width: 520px !important;
   width: 100% !important;
-  background: rgba(6, 8, 21, 0.82) !important;
+  background: rgba(6, 8, 21, 0.34) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 28px !important;
   padding: 38px 30px !important;
@@ -85,6 +85,115 @@ html, body {
   overflow: hidden !important;
   box-sizing: border-box !important;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s !important;
+}
+
+.onirolytic-content-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-width: 520px !important;
+  width: 100% !important;
+  z-index: 2 !important;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.onirolytic-dream-guide-wp {
+  position: relative !important;
+  width: 100% !important;
+  background: rgba(6, 8, 21, 0.34) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 22px 24px !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  text-align: left !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s !important;
+  box-sizing: border-box !important;
+}
+
+.onirolytic-dream-title {
+  font-family: monospace, Courier, monospace !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #38bdf8 !important;
+  letter-spacing: 0.15em !important;
+  margin: 0 0 8px 0 !important;
+  text-transform: uppercase !important;
+}
+
+.onirolytic-dream-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #cbd5e1 !important;
+  margin: 0 0 14px 0 !important;
+  font-style: italic !important;
+  text-align: left !important;
+}
+
+.onirolytic-dream-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.onirolytic-dream-author {
+  font-family: monospace, Courier, monospace !important;
+  font-size: 10px !important;
+  color: #64748b !important;
+}
+
+.onirolytic-dream-next-btn {
+  background: rgba(56, 189, 248, 0.1) !important;
+  border: 1px solid rgba(56, 189, 248, 0.35) !important;
+  border-radius: 8px !important;
+  color: #38bdf8 !important;
+  font-family: monospace, Courier, monospace !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 5px 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.onirolytic-dream-next-btn:hover {
+  background: rgba(56, 189, 248, 0.25) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
+}
+
+.onirolytic-audio-toggle-wp {
+  position: absolute !important;
+  top: 18px !important;
+  left: 18px !important;
+  z-index: 50 !important;
+  background: rgba(6, 8, 21, 0.75) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+  border-radius: 99px !important;
+  color: #22d3ee !important;
+  font-family: monospace, Courier, monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+}
+
+.onirolytic-audio-toggle-wp:hover {
+  background: rgba(34, 211, 238, 0.15) !important;
+  border-color: rgba(34, 211, 238, 0.6) !important;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.25) !important;
+  transform: translateY(-1px) scale(1.02) !important;
 }
 
 .onirolytic-zen-toggle-wp {
@@ -119,7 +228,8 @@ html, body {
   transform: translateY(-1px) scale(1.02) !important;
 }
 
-.onirolytic-ambient-section.onirolytic-zen-active .onirolytic-card-container {
+.onirolytic-ambient-section.onirolytic-zen-active .onirolytic-card-container,
+.onirolytic-ambient-section.onirolytic-zen-active .onirolytic-dream-guide-wp {
   opacity: 0 !important;
   transform: translateY(20px) scale(0.96) !important;
   pointer-events: none !important;
@@ -332,8 +442,13 @@ body {
 
 <!-- Módulo HTML do Santuário Onirolytic -->
 <div class="onirolytic-ambient-section">
-  <!-- Interactive Canvas Animation Background (Draws complete landscape) -->
+  <!-- Interactive Canvas Background (Draws complete landscape) -->
   <canvas class="onirolytic-canvas-wp"></canvas>
+
+  <!-- Button to toggle Procedural Synthesizer Audio directly inside static site -->
+  <button class="onirolytic-audio-toggle-wp" type="button">
+    <span class="onirolytic-audio-icon">🔇</span> <span class="onirolytic-audio-text-label">ATIVAR SONS</span>
+  </button>
 
   <!-- Button to toggle Zen Mode directly inside static site -->
   <button class="onirolytic-zen-toggle-wp" type="button">
@@ -343,31 +458,44 @@ body {
   <!-- Interactive Glowing Lunar Aura Backdrop -->
   <div class="onirolytic-lunar-aura"></div>
 
-  <!-- Content Card (Glassmorphic Container) -->
-  <div class="onirolytic-card-container">
-    <!-- Top Moon Color highlight decor line -->
-    <div class="onirolytic-top-bar"></div>
+  <!-- Content elements grouped inside a vertical flex wrapper -->
+  <div class="onirolytic-content-wrapper">
+    <!-- Content Card (Glassmorphic Container) -->
+    <div class="onirolytic-card-container">
+      <!-- Top Moon Color highlight decor line -->
+      <div class="onirolytic-top-bar"></div>
 
-    <div style="position: relative; z-index: 1;">
-      <!-- Brand Icon (Owl Emoji) -->
-      <div class="onirolytic-avatar-frame">🦉</div>
+      <div style="position: relative; z-index: 1;">
+        <!-- Brand Icon (Owl Emoji) -->
+        <div class="onirolytic-avatar-frame">🦉</div>
 
-      <!-- Main Heading -->
-      <h2 class="onirolytic-title">ONIROLYTIC</h2>
-      
-      <!-- Subtitle -->
-      <p class="onirolytic-subtitle">Fronteiras da Mente & Psicoficção</p>
+        <!-- Main Heading -->
+        <h2 class="onirolytic-title">ONIROLYTIC</h2>
+        
+        <!-- Subtitle -->
+        <p class="onirolytic-subtitle">Fronteiras da Mente & Psicoficção</p>
 
-      <!-- Main Description -->
-      <p class="onirolytic-desc">
-        Bem-vindo à Onirolytic. Nossa missão é dar estrutura ao que nasce nas fronteiras da mente. Atuamos no mapeamento técnico de experiências oníricas e no desenvolvimento de universos ficcionais, como a série A Coruja e o projeto Diário de um Sonhador.
-      </p>
+        <!-- Main Description -->
+        <p class="onirolytic-desc">
+          Bem-vindo à Onirolytic. Nossa missão é dar estrutura ao que nasce nas fronteiras da mente. Atuamos no mapeamento técnico de experiências oníricas e no desenvolvimento de universos ficcionais, como a série A Coruja e o projeto Diário de um Sonhador.
+        </p>
 
-      <!-- Tags -->
-      <div class="onirolytic-tags-group">
-        <span class="onirolytic-tag onirolytic-tag-cyan">A Coruja 🦉</span>
-        <span class="onirolytic-tag onirolytic-tag-gold">Diário de um Sonhador 📖</span>
-        <span class="onirolytic-tag onirolytic-tag-slate">Mapeamento Técnico</span>
+        <!-- Tags -->
+        <div class="onirolytic-tags-group">
+          <span class="onirolytic-tag onirolytic-tag-cyan">A Coruja 🦉</span>
+          <span class="onirolytic-tag onirolytic-tag-gold">Diário de um Sonhador 📖</span>
+          <span class="onirolytic-tag onirolytic-tag-slate">Mapeamento Técnico</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guia dos Sonhos Card (Static site interactive equivalent) -->
+    <div class="onirolytic-dream-guide-wp">
+      <div class="onirolytic-dream-title">TESTE DE REALIDADE</div>
+      <p class="onirolytic-dream-text">"Olhe para as palmas das mãos ou confira as horas duas vezes seguidas. Se os números no relógio ou a forma dos seus dedos mudarem misteriosamente, você despertou em um sonho lúcido."</p>
+      <div class="onirolytic-dream-footer">
+        <span class="onirolytic-dream-author">— Verificação Onírica</span>
+        <button class="onirolytic-dream-next-btn" type="button">PRÓXIMO INSIGHT</button>
       </div>
     </div>
   </div>
@@ -396,15 +524,17 @@ body {
     let width = 0;
     let height = 0;
 
-    const starDensity = 55;
-    const fireflyDensity = 40;
+    const starDensity = 65;
+    const fireflyDensity = 36;
     const fireflyColorSign = "golden";
-    const rippleSensitivity = 50;
+    const rippleSensitivity = 70;
 
     let stars = [];
     let fireflies = [];
     let shootingStars = [];
     let ripples = [];
+    let aquaticPlants = [];
+    let fishes = [];
     let rippleId = 0;
     let autoShootingStarTimer = 0;
 
@@ -417,6 +547,58 @@ body {
       canvas.height = height;
       initStars();
       initFireflies();
+      initAquaticPlants();
+      initFishes();
+    };
+
+    const initAquaticPlants = function() {
+      const count = 8;
+      aquaticPlants = [];
+      const minHeight = height * 0.54;
+      const maxHeight = height * 0.95;
+
+      for (let i = 0; i < count; i++) {
+        const t = (i + 0.5) / count;
+        const y = minHeight + t * (maxHeight - minHeight) * (0.85 + Math.random() * 0.15);
+        const x = width * (0.08 + Math.random() * 0.84);
+
+        const distanceFactor = (y - minHeight) / (maxHeight - minHeight);
+        const padRadiusX = 14 + distanceFactor * 32;
+        const padRadiusY = 5 + distanceFactor * 12;
+
+        aquaticPlants.push({
+          x: x,
+          y: y,
+          padRadiusX: padRadiusX,
+          padRadiusY: padRadiusY,
+          bloomFactor: 0.6 + Math.random() * 0.4,
+          phase: Math.random() * Math.PI * 2,
+          color: Math.random() > 0.5 ? "white" : "pink"
+        });
+      }
+    };
+
+    const initFishes = function() {
+      const count = 8;
+      fishes = [];
+      const minHeight = height * 0.55;
+      const maxHeight = height * 0.95;
+
+      for (let i = 0; i < count; i++) {
+        const x = width * (0.1 + Math.random() * 0.8);
+        const y = minHeight + Math.random() * (maxHeight - minHeight);
+        fishes.push({
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.2,
+          targetX: width * (0.1 + Math.random() * 0.8),
+          targetY: minHeight + Math.random() * (maxHeight - minHeight),
+          size: 4 + Math.random() * 3,
+          phase: Math.random() * Math.PI * 2,
+          scaredTimer: 0
+        });
+      }
     };
 
     const initStars = function() {
@@ -503,6 +685,199 @@ body {
     };
 
     // Registrar Eventos Interativos
+    // Registrar Eventos Interativos
+    const checkFishScare = function(mx, my) {
+      let fishScared = false;
+      fishes.forEach(function(fish) {
+        const dx = fish.x - mx;
+        const dy = fish.y - my;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 60) {
+          fish.scaredTimer = 180;
+          const angle = Math.atan2(dy, dx) + (Math.random() - 0.5) * 0.4;
+          const speed = 4.0 + Math.random() * 2.5;
+          fish.vx = Math.cos(angle) * speed;
+          fish.vy = Math.sin(angle) * (speed * 0.45);
+          
+          fish.targetX = fish.x + Math.cos(angle) * 400;
+          fish.targetY = fish.y + Math.sin(angle) * 180;
+          fishScared = true;
+        }
+      });
+      return fishScared;
+    };
+
+    // Procedural Audio Synthesizer (Synth Wave & Wind soundscape)
+    let audioCtx = null;
+    let isAudioPlaying = false;
+    let noiseBuffer = null;
+    let masterGain = null;
+    let waveNoiseNode = null, windNoiseNode = null;
+    let waveLFO = null, windLFO = null;
+    let waveFilter = null, windFilter = null;
+    let wavesModGain = null, windModGain = null;
+
+    const initAudio = function() {
+      if (audioCtx) return;
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioCtx();
+        
+        masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.7, audioCtx.currentTime);
+        masterGain.connect(audioCtx.destination);
+
+        const bufferSize = audioCtx.sampleRate * 2;
+        noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = Math.random() * 2 - 1;
+        }
+
+        // --- Channel 1: Waves ---
+        const waveGain = audioCtx.createGain();
+        waveGain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+        waveGain.connect(masterGain);
+
+        waveNoiseNode = audioCtx.createBufferSource();
+        waveNoiseNode.buffer = noiseBuffer;
+        waveNoiseNode.loop = true;
+
+        waveFilter = audioCtx.createBiquadFilter();
+        waveFilter.type = "lowpass";
+        waveFilter.Q.setValueAtTime(1.0, audioCtx.currentTime);
+        waveFilter.frequency.setValueAtTime(450, audioCtx.currentTime);
+
+        wavesModGain = audioCtx.createGain();
+        wavesModGain.gain.setValueAtTime(0.65, audioCtx.currentTime);
+
+        waveLFO = audioCtx.createOscillator();
+        waveLFO.type = "sine";
+        waveLFO.frequency.setValueAtTime(0.07, audioCtx.currentTime);
+
+        const waveLFOGain = audioCtx.createGain();
+        waveLFOGain.gain.setValueAtTime(0.35, audioCtx.currentTime);
+
+        waveLFO.connect(waveLFOGain);
+        waveLFOGain.connect(wavesModGain.gain);
+
+        const waveFreqGain = audioCtx.createGain();
+        waveFreqGain.gain.setValueAtTime(300, audioCtx.currentTime);
+        waveLFO.connect(waveFreqGain);
+        waveFreqGain.connect(waveFilter.frequency);
+
+        waveNoiseNode.connect(waveFilter);
+        waveFilter.connect(wavesModGain);
+        wavesModGain.connect(waveGain);
+
+        waveLFO.start();
+        waveNoiseNode.start();
+
+        // --- Channel 2: Wind ---
+        const windGain = audioCtx.createGain();
+        windGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        windGain.connect(masterGain);
+
+        windNoiseNode = audioCtx.createBufferSource();
+        windNoiseNode.buffer = noiseBuffer;
+        windNoiseNode.loop = true;
+
+        windFilter = audioCtx.createBiquadFilter();
+        windFilter.type = "lowpass";
+        windFilter.Q.setValueAtTime(0.7, audioCtx.currentTime);
+        windFilter.frequency.setValueAtTime(550, audioCtx.currentTime);
+
+        windModGain = audioCtx.createGain();
+        windModGain.gain.setValueAtTime(0.45, audioCtx.currentTime);
+
+        windLFO = audioCtx.createOscillator();
+        windLFO.type = "sine";
+        windLFO.frequency.setValueAtTime(0.035, audioCtx.currentTime);
+
+        const windLFOGain = audioCtx.createGain();
+        windLFOGain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+
+        windLFO.connect(windLFOGain);
+        windLFOGain.connect(windModGain.gain);
+
+        const windFreqGain = audioCtx.createGain();
+        windFreqGain.gain.setValueAtTime(250, windFreqGain);
+        windLFO.connect(windFreqGain);
+        windFreqGain.connect(windFilter.frequency);
+
+        windNoiseNode.connect(windFilter);
+        windFilter.connect(windModGain);
+        windModGain.connect(windGain);
+
+        windLFO.start();
+        windNoiseNode.start();
+
+      } catch (err) {
+        console.error("Audio initialization failed:", err);
+      }
+    };
+
+    const toggleAudio = function() {
+      if (!audioCtx) {
+        initAudio();
+      }
+      if (!audioCtx) return;
+
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+        isAudioPlaying = true;
+      } else if (audioCtx.state === "running") {
+        audioCtx.suspend();
+        isAudioPlaying = false;
+      } else {
+        isAudioPlaying = !isAudioPlaying;
+      }
+      
+      const audioIcon = section.querySelector('.onirolytic-audio-icon');
+      const audioLabel = section.querySelector('.onirolytic-audio-text-label');
+      if (audioIcon) {
+        audioIcon.textContent = isAudioPlaying ? '🔊' : '🔇';
+      }
+      if (audioLabel) {
+        audioLabel.textContent = isAudioPlaying ? 'DESATIVAR' : 'ATIVAR SONS';
+      }
+    };
+
+    const audioToggle = section.querySelector('.onirolytic-audio-toggle-wp');
+    if (audioToggle) {
+      audioToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleAudio();
+      });
+    }
+
+    // Carousel de Dicas do Guia dos Sonhos Lúcidos
+    const dreamTips = [
+      { title: "TESTE DE REALIDADE", text: "Olhe para as palmas das mãos ou confira as horas duas vezes seguidas. Se os números no relógio ou a forma dos seus dedos mudarem misteriosamente, você despertou em um sonho lúcido.", author: "Verificação Onírica" },
+      { title: "DIÁRIO DE SONHOS", text: "Registre todas as suas memórias oníricas assim que abrir os olhos. O hábito de escrever fortalece a ponte neural que transfere a consciência do sono profundo para a vigília ativa.", author: "Fator de Retenção" },
+      { title: "TÉCNICA MILD", text: "Antes de adormecer, repita: 'Na próxima vez que estiver sonhando, vou lembrar que estou em um sonho'. Visualize-se realizando sua ação favorita com plena lucidez no luar.", author: "Mnemônica de Lucidez" },
+      { title: "ESTABILIZAÇÃO DO SONHO", text: "Ao sentir o sonho lúcido colapsar ou desbotar, esfregue as mãos vigorosamente ou gire em torno do seu próprio eixo imaginário. Isso anchors seus sentidos e re-estabiliza a física da cena.", author: "Manutenção de Coesão" },
+      { title: "TÉCNICA WILD", text: "Mantenha o corpo inteiramente imóvel e siga a dança das imagens hipnagógicas atrás de suas pálpebras com leveza. Deslize da vigília para o sono profundo sem apagar a mente lúcida.", author: "Indução Desperta" },
+      { title: "ANCORAGEM DO LAGO", text: "Use as vitórias-régias bioluminescentes ou a conexão entre as estrelas do firmamento como focos visuais relaxantes. A quietude concentrada impede despertares abruptos causados pela excitação.", author: "Engajamento Visual" },
+      { title: "MÉTODO WBTB", text: "Acorde após 5 horas, permaneça consciente por 15 minutos lendo este guia sobre sonhos e voltar a deitar. A sutil atividade cortical receita as chances de despertar no ciclo REM.", author: "Intervalo Desperto" },
+      { title: "SÍMBOLOS ONÍRICOS", text: "Observe anomalias clássicas da maquinação mental: interruptores inoperantes, gravidade oscilante ou espelhos infinitamente distorcidos. Use estas rachaduras no véu para despertar.", author: "Ficha de Reconhecimento" }
+    ];
+    let curTipIndex = 0;
+    const nextBtn = section.querySelector('.onirolytic-dream-next-btn');
+    const dreamTitleElem = section.querySelector('.onirolytic-dream-title');
+    const dreamTextElem = section.querySelector('.onirolytic-dream-text');
+    const dreamAuthorElem = section.querySelector('.onirolytic-dream-author');
+
+    if (nextBtn && dreamTitleElem && dreamTextElem && dreamAuthorElem) {
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        curTipIndex = (curTipIndex + 1) % dreamTips.length;
+        dreamTitleElem.textContent = dreamTips[curTipIndex].title;
+        dreamTextElem.textContent = '"' + dreamTips[curTipIndex].text + '"';
+        dreamAuthorElem.textContent = '— ' + dreamTips[curTipIndex].author;
+      });
+    }
+
     const zenToggle = section.querySelector('.onirolytic-zen-toggle-wp');
     if (zenToggle) {
       zenToggle.addEventListener('click', function(e) {
@@ -609,7 +984,7 @@ body {
 
       // B. Glowing Lunar Atmosphere and Halo
       const mRgb = "34, 211, 238";
-      const glowOpacity = 60 / 100;
+      const glowOpacity = 69 / 100;
       const moonX = width * 0.5;
       const moonY = height * 0.23;
       const moonRadius = 46;
@@ -1137,6 +1512,201 @@ body {
         ctx.arc(mouse.x, mouse.y, mouse.hoverInLake ? 55 : 30, 0, Math.PI * 2);
         ctx.fill();
       }
+
+      // 7. Vitória Régia (Night Flora)
+      aquaticPlants.forEach(function(plant) {
+        const x = plant.x;
+        const y = plant.y;
+        const padRadiusX = plant.padRadiusX;
+        const padRadiusY = plant.padRadiusY;
+        const bloomFactor = plant.bloomFactor;
+        const phase = plant.phase;
+        const color = plant.color;
+
+        const swayY = Math.sin(time + phase) * 0.5;
+        const swayX = Math.cos(time * 0.5 + phase) * 0.7;
+        const py = y + swayY;
+        const px = x + swayX;
+
+        ctx.fillStyle = "#0c2c18";
+        ctx.strokeStyle = "#164e2b";
+        ctx.lineWidth = 1.2;
+        ctx.beginPath();
+        ctx.ellipse(px, py, padRadiusX, padRadiusY, Math.sin(time * 0.3 + phase) * 0.04, 0.12 * Math.PI, 1.85 * Math.PI);
+        ctx.lineTo(px, py);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        const rawGlow = glowOpacity;
+        const currentBloom = bloomFactor * (0.15 + 0.85 * rawGlow);
+
+        if (currentBloom > 0.08) {
+          ctx.save();
+          if (rawGlow > 0) {
+            ctx.shadowColor = color === "pink" ? "rgba(244, 114, 182, 0.45)" : "rgba(" + mRgb + ", 0.45)";
+            ctx.shadowBlur = 6 + 7 * Math.sin(time + phase);
+          }
+
+          const petalColor = color === "pink" ? "rgba(244, 114, 182, 0.85)" : "rgba(255, 255, 255, 0.85)";
+          const numPetals = 12;
+          const petalRadiusX = padRadiusX * 0.38 * currentBloom;
+          const petalRadiusY = padRadiusY * 0.68 * currentBloom;
+
+          ctx.fillStyle = petalColor;
+          for (let p = 0; p < numPetals; p++) {
+            const angle = (p / numPetals) * Math.PI * 2 + time * 0.03 + phase;
+            const petX = px + Math.cos(angle) * (petalRadiusX * 0.35);
+            const petY = py + Math.sin(angle) * (petalRadiusY * 0.35) - 2.0;
+
+            ctx.beginPath();
+            ctx.ellipse(petX, petY, petalRadiusX * 0.55, petalRadiusY, angle, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          if (currentBloom > 0.45) {
+            const stamenGrad = ctx.createRadialGradient(px, py - 2.5, 0, px, py - 2.5, petalRadiusX * 0.45);
+            stamenGrad.addColorStop(0, "rgba(253, 224, 71, " + (0.95 * rawGlow) + ")");
+            stamenGrad.addColorStop(0.5, "rgba(245, 158, 11, " + (0.5 * rawGlow) + ")");
+            stamenGrad.addColorStop(1, "rgba(245, 158, 11, 0)");
+            ctx.fillStyle = stamenGrad;
+            ctx.beginPath();
+            ctx.arc(px, py - 2.5, petalRadiusX * 0.45, 0, Math.PI * 2);
+            ctx.fill();
+          }
+          ctx.restore();
+        }
+      });
+
+      // 8. Peixinhos Bioluminescentes (Ciano Claro)
+      fishes.forEach(function(fish) {
+        if (fish.scaredTimer > 0) {
+          fish.scaredTimer--;
+        }
+
+        const dx = fish.targetX - fish.x;
+        const dy = fish.targetY - fish.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 15 || fish.vx === 0) {
+          fish.targetX = width * (0.05 + Math.random() * 0.9);
+          fish.targetY = height * (0.55 + Math.random() * 0.4);
+          fish.scaredTimer = 0;
+        }
+
+        const targetAngle = Math.atan2(dy, dx);
+        const speed = fish.scaredTimer > 0 ? 5.5 : 0.65;
+        const ease = fish.scaredTimer > 0 ? 0.08 : 0.03;
+        fish.vx += (Math.cos(targetAngle) * speed - fish.vx) * ease;
+        fish.vy += (Math.sin(targetAngle) * speed * 0.5 - fish.vy) * ease;
+
+        const maxS = fish.scaredTimer > 0 ? 7.0 : 1.2;
+        const currentSpeed = Math.sqrt(fish.vx * fish.vx + fish.vy * fish.vy);
+        if (currentSpeed > maxS) {
+          fish.vx = (fish.vx / currentSpeed) * maxS;
+          fish.vy = (fish.vy / currentSpeed) * maxS;
+        }
+
+        fish.x += fish.vx;
+        fish.y += fish.vy;
+
+        // Avoid and collide with Vitória Régia (Aquatic Plants)
+        aquaticPlants.forEach(function(plant) {
+          const pdx = fish.x - plant.x;
+          const pdy = fish.y - plant.y;
+          const rx = plant.padRadiusX;
+          const ry = plant.padRadiusY;
+          
+          if (rx > 0 && ry > 0) {
+            const nx = pdx / rx;
+            const ny = pdy / ry;
+            const distSq = nx * nx + ny * ny;
+            
+            if (distSq < 1.15) {
+              const angle = Math.atan2(ny, nx);
+              
+              const pushFactor = 1.15;
+              fish.x = plant.x + Math.cos(angle) * rx * pushFactor;
+              fish.y = plant.y + Math.sin(angle) * ry * pushFactor;
+              
+              const normX = Math.cos(angle) / rx;
+              const normY = Math.sin(angle) / ry;
+              const normLen = Math.sqrt(normX * normX + normY * normY);
+              const nX = normX / normLen;
+              const nY = normY / normLen;
+              
+              const dot = fish.vx * nX + fish.vy * nY;
+              if (dot < 0) {
+                fish.vx = fish.vx - 1.4 * dot * nX;
+                fish.vy = fish.vy - 1.4 * dot * nY;
+              }
+              
+              fish.targetX = width * (0.05 + Math.random() * 0.9);
+              fish.targetY = height * (0.55 + Math.random() * 0.4);
+            }
+          }
+        });
+
+        if (fish.x < -15) fish.x = width + 15;
+        if (fish.x > width + 15) fish.x = -15;
+        if (fish.y < height * 0.52) {
+          fish.y = height * 0.52 + 5;
+          fish.targetY = height * (0.6 + Math.random() * 0.35);
+        }
+        if (fish.y > height * 0.98) {
+          fish.y = height * 0.98 - 5;
+          fish.targetY = height * (0.6 + Math.random() * 0.35);
+        }
+
+        const angle = Math.atan2(fish.vy, fish.vx);
+        ctx.save();
+        ctx.translate(fish.x, fish.y);
+        ctx.rotate(angle);
+
+        const glowRadius = fish.size * (fish.scaredTimer > 0 ? 5.0 : 3.5);
+        const fishGlow = ctx.createRadialGradient(0, 0, 1, 0, 0, glowRadius);
+        fishGlow.addColorStop(0, "rgba(34, 211, 238, " + (0.45 * (0.7 + 0.3 * Math.sin(time * 3 + fish.phase))) + ")");
+        fishGlow.addColorStop(0.4, "rgba(34, 211, 238, " + (0.12 * (0.7 + 0.3 * Math.sin(time * 3 + fish.phase))) + ")");
+        fishGlow.addColorStop(1, "rgba(34, 211, 238, 0)");
+        ctx.fillStyle = fishGlow;
+        ctx.beginPath();
+        ctx.arc(0, 0, glowRadius, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = "#22d3ee";
+        ctx.beginPath();
+        ctx.moveTo(fish.size * 1.2, 0);
+        ctx.quadraticCurveTo(0, fish.size * 0.45, -fish.size, 0);
+        ctx.quadraticCurveTo(0, -fish.size * 0.45, fish.size * 1.2, 0);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.strokeStyle = "#e0f2fe";
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(fish.size * 0.5, -fish.size * 0.15);
+        ctx.quadraticCurveTo(0, -fish.size * 0.25, -fish.size * 0.4, 0);
+        ctx.stroke();
+
+        const wiggleFreq = fish.scaredTimer > 0 ? 25 : 8;
+        const wiggleAmp = fish.scaredTimer > 0 ? 0.75 : 0.45;
+        const tailAngle = Math.sin(time * wiggleFreq + fish.phase) * wiggleAmp;
+
+        ctx.save();
+        ctx.translate(-fish.size, 0);
+        ctx.rotate(tailAngle);
+        ctx.fillStyle = "rgba(34, 211, 238, 0.85)";
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(-fish.size * 0.85, -fish.size * 0.5);
+        ctx.lineTo(-fish.size * 0.5, 0);
+        ctx.lineTo(-fish.size * 0.85, fish.size * 0.5);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+
+        ctx.restore();
+      });
 
       requestAnimationFrame(draw);
     };
