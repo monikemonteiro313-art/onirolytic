@@ -1,0 +1,1157 @@
+<!-- ONIROLYTIC IMMERSIVE SECTION (WORDPRESS COMPATIBLE) -->
+<style id="onirolytic-core-styles">
+.onirolytic-ambient-section {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  background: #020308 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 40px 24px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  z-index: 99999 !important;
+}
+
+html, body {
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #020308 !important;
+}
+
+.onirolytic-vector-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  object-fit: fill !important;
+  z-index: 0 !important;
+}
+
+.onirolytic-ambient-section, 
+.onirolytic-ambient-section * {
+  box-sizing: border-box !important;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.onirolytic-lunar-aura {
+  position: absolute !important;
+  top: -60px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  width: 380px !important;
+  height: 380px !important;
+  border-radius: 50% !important;
+  background: #22d3ee !important;
+  filter: blur(90px) !important;
+  opacity: 0.17 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: onirolytic-aura-pulse 8s ease-in-out infinite alternate !important;
+}
+
+@keyframes onirolytic-aura-pulse {
+  0% { transform: translate(-50%, 0) scale(0.95); opacity: 0.13 !important; }
+  100% { transform: translate(-50%, 5px) scale(1.05); opacity: 0.19 !important; }
+}
+
+.onirolytic-card-container {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 520px !important;
+  width: 100% !important;
+  background: rgba(6, 8, 21, 0.82) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 28px !important;
+  padding: 38px 30px !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  text-align: center !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.75) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s !important;
+}
+
+.onirolytic-zen-toggle-wp {
+  position: absolute !important;
+  top: 18px !important;
+  right: 18px !important;
+  z-index: 50 !important;
+  background: rgba(6, 8, 21, 0.75) !important;
+  border: 1px solid rgba(34, 211, 238, 0.3) !important;
+  border-radius: 99px !important;
+  color: #22d3ee !important;
+  font-family: monospace, Courier, monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 6px 14px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+  text-shadow: none !important;
+}
+
+.onirolytic-zen-toggle-wp:hover {
+  background: rgba(34, 211, 238, 0.15) !important;
+  border-color: rgba(34, 211, 238, 0.6) !important;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.25) !important;
+  transform: translateY(-1px) scale(1.02) !important;
+}
+
+.onirolytic-ambient-section.onirolytic-zen-active .onirolytic-card-container {
+  opacity: 0 !important;
+  transform: translateY(20px) scale(0.96) !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+.onirolytic-ambient-section.onirolytic-zen-active .onirolytic-zen-toggle-wp {
+  background: rgba(6, 8, 21, 0.8) !important;
+  border-color: rgba(245, 158, 11, 0.5) !important;
+  color: #f59e0b !important;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.2) !important;
+}
+
+.onirolytic-top-bar {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent) !important;
+  opacity: 0.8 !important;
+}
+
+.onirolytic-avatar-frame {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 18px !important;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.05) !important;
+  font-size: 26px !important;
+  line-height: 1 !important;
+}
+
+h2.onirolytic-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 6px 0 !important;
+  padding: 0 !important;
+  color: #22d3ee !important;
+  text-shadow: 0 0 15px rgba(#22d3ee, 0.55) !important;
+  border: none !important;
+  background: none !important;
+}
+
+p.onirolytic-subtitle {
+  font-family: monospace, Courier, monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase !important;
+  color: #94a3b8 !important;
+  margin: 0 0 24px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+p.onirolytic-desc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  color: #cbd5e1 !important;
+  text-align: justify !important;
+  margin: 0 0 28px 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  border: none !important;
+  background: none !important;
+}
+
+.onirolytic-tags-group {
+  display: flex !important;
+  gap: 10px !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.onirolytic-tag {
+  display: inline-block !important;
+  font-size: 10px !important;
+  font-family: monospace, Courier, monospace !important;
+  padding: 5px 12px !important;
+  border-radius: 99px !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  margin: 2px !important;
+}
+
+.onirolytic-tag-cyan {
+  background: rgba(34, 211, 238, 0.1) !important;
+  border: 1px solid rgba(34, 211, 238, 0.25) !important;
+  color: #22d3ee !important;
+}
+
+.onirolytic-tag-gold {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+  color: #f59e0b !important;
+}
+
+.onirolytic-tag-slate {
+  background: rgba(245,158,11, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #cbd5e1 !important;
+}
+
+.onirolytic-lake {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 48% !important;
+  background: linear-gradient(180deg, rgba(6, 12, 34, 0.45) 0%, rgba(3, 5, 14, 0.98) 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+}
+
+.onirolytic-lake-reflection {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 320px !important;
+  height: 100% !important;
+  background: radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.22) 0%, transparent 75%) !important;
+  filter: blur(12px) !important;
+  animation: onirolytic-water-shimmer 6s ease-in-out infinite alternate !important;
+}
+
+.onirolytic-lake-ripple {
+  position: absolute !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent 0%, rgba(34, 211, 238, 0.1) 35%, rgba(34, 211, 238, 0.25) 50%, rgba(34, 211, 238, 0.1) 65%, transparent 100%) !important;
+  opacity: 0.65 !important;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.15) !important;
+}
+
+.onirolytic-lake-ripple-1 {
+  top: 15px !important;
+  animation: onirolytic-ripple-wave 12s linear infinite !important;
+}
+
+.onirolytic-lake-ripple-2 {
+  top: 45px !important;
+  opacity: 0.45 !important;
+  animation: onirolytic-ripple-wave-slow 18s linear infinite !important;
+}
+
+.onirolytic-lake-ripple-3 {
+  top: 80px !important;
+  opacity: 0.3 !important;
+  animation: onirolytic-ripple-wave 24s linear infinite reverse !important;
+}
+
+.onirolytic-canvas-wp {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+@keyframes onirolytic-water-shimmer {
+  0% { opacity: 0.7; transform: translateX(-50%) scaleX(0.85) scaleY(1); }
+  100% { opacity: 1.2; transform: translateX(-50%) scaleX(1.15) scaleY(1.1); }
+}
+
+@keyframes onirolytic-ripple-wave {
+  0% { transform: translateY(0) scaleY(0.8) skewX(-2deg); opacity: 0.35; }
+  50% { transform: translateY(6px) scaleY(1.2) skewX(2deg); opacity: 0.7; }
+  100% { transform: translateY(0) scaleY(0.8) skewX(-2deg); opacity: 0.35; }
+}
+
+@keyframes onirolytic-ripple-wave-slow {
+  0% { transform: translateY(0) scaleY(1) skewX(3deg); opacity: 0.25; }
+  50% { transform: translateY(9px) scaleY(0.7) skewX(-3deg); opacity: 0.55; }
+  100% { transform: translateY(0) scaleY(1) skewX(3deg); opacity: 0.25; }
+}
+
+/* ==========================================================================
+   CONFIGURACAO DE SUPORTE ADICIONAL (FUNDO ESCURO PARA O CORPO DO TEMA)
+   Ajuda a evitar qualquer borda branca residual nas laterais do site.
+   ========================================================================== */
+
+body {
+  background-color: #020308 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+</style>
+
+<!-- Módulo HTML do Santuário Onirolytic -->
+<div class="onirolytic-ambient-section">
+  <!-- Interactive Canvas Animation Background (Draws complete landscape) -->
+  <canvas class="onirolytic-canvas-wp"></canvas>
+
+  <!-- Button to toggle Zen Mode directly inside static site -->
+  <button class="onirolytic-zen-toggle-wp" type="button">
+    <span class="onirolytic-zen-icon">👁️</span> <span class="onirolytic-zen-text-label">MODO ZEN</span>
+  </button>
+
+  <!-- Interactive Glowing Lunar Aura Backdrop -->
+  <div class="onirolytic-lunar-aura"></div>
+
+  <!-- Content Card (Glassmorphic Container) -->
+  <div class="onirolytic-card-container">
+    <!-- Top Moon Color highlight decor line -->
+    <div class="onirolytic-top-bar"></div>
+
+    <div style="position: relative; z-index: 1;">
+      <!-- Brand Icon (Owl Emoji) -->
+      <div class="onirolytic-avatar-frame">🦉</div>
+
+      <!-- Main Heading -->
+      <h2 class="onirolytic-title">ONIROLYTIC</h2>
+      
+      <!-- Subtitle -->
+      <p class="onirolytic-subtitle">Fronteiras da Mente & Psicoficção</p>
+
+      <!-- Main Description -->
+      <p class="onirolytic-desc">
+        Bem-vindo à Onirolytic. Nossa missão é dar estrutura ao que nasce nas fronteiras da mente. Atuamos no mapeamento técnico de experiências oníricas e no desenvolvimento de universos ficcionais, como a série A Coruja e o projeto Diário de um Sonhador.
+      </p>
+
+      <!-- Tags -->
+      <div class="onirolytic-tags-group">
+        <span class="onirolytic-tag onirolytic-tag-cyan">A Coruja 🦉</span>
+        <span class="onirolytic-tag onirolytic-tag-gold">Diário de um Sonhador 📖</span>
+        <span class="onirolytic-tag onirolytic-tag-slate">Mapeamento Técnico</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lunar Lake Area -->
+  <div class="onirolytic-lake">
+    <div class="onirolytic-lake-reflection"></div>
+    <div class="onirolytic-lake-ripple onirolytic-lake-ripple-1"></div>
+    <div class="onirolytic-lake-ripple onirolytic-lake-ripple-2"></div>
+    <div class="onirolytic-lake-ripple onirolytic-lake-ripple-3"></div>
+  </div>
+</div>
+
+<!-- Lógica Interativa Autocontida (Vagalumes, Estrelas, Estrelas Cadentes e Ondulações no Lago) -->
+<script>
+(function() {
+  const sections = document.querySelectorAll('.onirolytic-ambient-section');
+  sections.forEach(function(section) {
+    if (section.dataset.onirolyticInitialized === 'true') return;
+    section.dataset.onirolyticInitialized = 'true';
+
+    const canvas = section.querySelector('.onirolytic-canvas-wp');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let width = 0;
+    let height = 0;
+
+    const starDensity = 55;
+    const fireflyDensity = 40;
+    const fireflyColorSign = "golden";
+    const rippleSensitivity = 50;
+
+    let stars = [];
+    let fireflies = [];
+    let shootingStars = [];
+    let ripples = [];
+    let rippleId = 0;
+    let autoShootingStarTimer = 0;
+
+    let mouse = { x: -1000, y: -1000, lastX: -1000, lastY: -1000, hoverInLake: false };
+
+    const resize = function() {
+      width = section.clientWidth;
+      height = section.clientHeight;
+      canvas.width = width;
+      canvas.height = height;
+      initStars();
+      initFireflies();
+    };
+
+    const initStars = function() {
+      const starCount = Math.floor((width * height * starDensity) / 10000) || 30;
+      stars = [];
+      const skyHeight = height * 0.55;
+      for (let i = 0; i < starCount; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * skyHeight,
+          size: Math.random() * 1.5 + 0.5,
+          alpha: Math.random() * 0.8 + 0.2,
+          twinkleSpeed: 0.01 + Math.random() * 0.03,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    };
+
+    const initFireflies = function() {
+      const count = Math.floor((width * height * fireflyDensity) / 25000) || 10;
+      fireflies = [];
+      for (let i = 0; i < count; i++) {
+        const isForeground = Math.random() > 0.4;
+        const x = isForeground
+          ? (Math.random() > 0.5 ? Math.random() * width * 0.25 : width - Math.random() * width * 0.25)
+          : Math.random() * width;
+        const y = height * 0.4 + Math.random() * height * 0.6;
+        
+        let hueVal = 43; // Golden por padrão
+        if (fireflyColorSign === "cyan") hueVal = 184;
+        else if (fireflyColorSign === "purple") hueVal = 270;
+        else if (fireflyColorSign === "green") hueVal = 140;
+        else if (fireflyColorSign === "red") hueVal = 0;
+        else if (fireflyColorSign === "mixed") hueVal = Math.random() > 0.5 ? 184 : 43;
+
+        fireflies.push({
+          x: x,
+          y: y,
+          size: Math.random() * 2.2 + 0.8,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -0.2 - Math.random() * 0.5,
+          alpha: Math.random() * 0.6 + 0.3,
+          phase: Math.random() * Math.PI * 2,
+          speed: 0.02 + Math.random() * 0.05,
+          hue: hueVal
+        });
+      }
+    };
+
+    const spawnShootingStar = function() {
+      const isRightToLeft = Math.random() > 0.4;
+      const x = isRightToLeft ? width * (0.4 + Math.random() * 0.5) : width * (0.1 + Math.random() * 0.3);
+      const y = Math.random() * (height * 0.25);
+      
+      shootingStars.push({
+        x: x,
+        y: y,
+        length: 80 + Math.random() * 120,
+        speed: 12 + Math.random() * 10,
+        angle: isRightToLeft ? Math.PI * (5 / 6 + Math.random() * 0.1) : Math.PI * (1 / 6 - Math.random() * 0.1),
+        alpha: 1.0,
+        thickness: Math.random() * 1.5 + 0.8
+      });
+    };
+
+    const createRipple = function(mx, my, power) {
+      if (power === undefined) power = 1;
+      const relativeY = my / height;
+      if (relativeY < 0.52) return;
+      
+      const isGoldZone = relativeY > 0.65 && relativeY < 0.9;
+      const colorRGB = isGoldZone ? "245, 158, 11" : "56, 189, 248";
+
+      ripples.push({
+        id: rippleId++,
+        x: mx,
+        y: my,
+        radius: 2,
+        maxRadius: 65 + Math.random() * 50 + (rippleSensitivity * 0.4),
+        alpha: 0.9,
+        strength: power,
+        color: colorRGB
+      });
+    };
+
+    // Registrar Eventos Interativos
+    const zenToggle = section.querySelector('.onirolytic-zen-toggle-wp');
+    if (zenToggle) {
+      zenToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        section.classList.toggle('onirolytic-zen-active');
+        const isZen = section.classList.contains('onirolytic-zen-active');
+        const textLabel = zenToggle.querySelector('.onirolytic-zen-text-label');
+        const iconLabel = zenToggle.querySelector('.onirolytic-zen-icon');
+        if (textLabel) {
+          textLabel.textContent = isZen ? 'SAIR ZEN' : 'MODO ZEN';
+        }
+        if (iconLabel) {
+          iconLabel.textContent = isZen ? '👁️‍🗨️' : '👁️';
+        }
+      });
+    }
+    section.addEventListener('mousemove', function(e) {
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+
+      const lastX = mouse.x;
+      const lastY = mouse.y;
+
+      const relativeY = my / height;
+      const isNowInLake = relativeY >= 0.52;
+
+      mouse = {
+        x: mx,
+        y: my,
+        lastX: lastX,
+        lastY: lastY,
+        hoverInLake: isNowInLake
+      };
+
+      if (isNowInLake && Math.random() < 0.2 * (rippleSensitivity / 50)) {
+        const dx = mx - lastX;
+        const dy = my - lastY;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist > 8) {
+          createRipple(mx, my, Math.min(dist / 30, 0.8));
+        }
+      }
+    });
+
+    section.addEventListener('mouseleave', function() {
+      mouse = { x: -1000, y: -1000, lastX: -1000, lastY: -1000, hoverInLake: false };
+    });
+
+    section.addEventListener('click', function(e) {
+      const rect = canvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const relativeY = my / height;
+
+      if (relativeY >= 0.52) {
+        createRipple(mx, my, 1.8);
+      } else {
+        spawnShootingStar();
+      }
+    });
+
+    section.addEventListener('touchmove', function(e) {
+      if (e.touches && e.touches[0]) {
+        const t = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const mx = t.clientX - rect.left;
+        const my = t.clientY - rect.top;
+        const relativeY = my / height;
+
+        mouse = {
+          x: mx,
+          y: my,
+          lastX: mouse.x,
+          lastY: mouse.y,
+          hoverInLake: relativeY >= 0.52
+        };
+
+        if (relativeY >= 0.52 && Math.random() < 0.25) {
+          createRipple(mx, my, 0.5);
+        }
+      }
+    });
+
+    section.addEventListener('touchend', function() {
+      mouse = { x: -1000, y: -1000, lastX: -1000, lastY: -1000, hoverInLake: false };
+    });
+
+    let time = 0;
+
+    const draw = function() {
+      if (!ctx || width === 0 || height === 0) return;
+      time += 0.015;
+      
+      ctx.clearRect(0, 0, width, height);
+
+      // A. Sky Background
+      const skyGrad = ctx.createLinearGradient(0, 0, 0, height * 0.52);
+      skyGrad.addColorStop(0, "#02040b");
+      skyGrad.addColorStop(0.65, "#070c20");
+      skyGrad.addColorStop(1, "#101633");
+      ctx.fillStyle = skyGrad;
+      ctx.fillRect(0, 0, width, height * 0.52);
+
+      // B. Glowing Lunar Atmosphere and Halo
+      const mRgb = "34, 211, 238";
+      const glowOpacity = 60 / 100;
+      const moonX = width * 0.5;
+      const moonY = height * 0.23;
+      const moonRadius = 46;
+
+      if (glowOpacity > 0) {
+        // Outer giant atmospheric mist (Expanded with extra step for elegant gradient)
+        const haloGrad1 = ctx.createRadialGradient(moonX, moonY, moonRadius * 0.5, moonX, moonY, 320);
+        haloGrad1.addColorStop(0, "rgba(" + mRgb + ", " + (0.55 * glowOpacity) + ")");
+        haloGrad1.addColorStop(0.25, "rgba(" + mRgb + ", " + (0.28 * glowOpacity) + ")");
+        haloGrad1.addColorStop(0.6, "rgba(" + mRgb + ", " + (0.1 * glowOpacity) + ")");
+        haloGrad1.addColorStop(1, "rgba(" + mRgb + ", 0)");
+        ctx.fillStyle = haloGrad1;
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, 320, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Inner glowing core flare (Much brighter and wider)
+        const haloGrad2 = ctx.createRadialGradient(moonX, moonY, moonRadius * 0.1, moonX, moonY, 110);
+        haloGrad2.addColorStop(0, "rgba(255, 255, 255, " + (0.98 * glowOpacity) + ")");
+        haloGrad2.addColorStop(0.25, "rgba(" + mRgb + ", " + (0.85 * glowOpacity) + ")");
+        haloGrad2.addColorStop(0.55, "rgba(" + mRgb + ", " + (0.4 * glowOpacity) + ")");
+        haloGrad2.addColorStop(1, "rgba(" + mRgb + ", 0)");
+        ctx.fillStyle = haloGrad2;
+        ctx.beginPath();
+        ctx.arc(moonX, moonY, 110, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Vertical celestial light shaft / moon column
+        const columnGrad = ctx.createLinearGradient(moonX - 45, moonY, moonX + 45, moonY);
+        columnGrad.addColorStop(0, "rgba(" + mRgb + ", 0)");
+        columnGrad.addColorStop(0.5, "rgba(" + mRgb + ", " + (0.12 * glowOpacity) + ")");
+        columnGrad.addColorStop(1, "rgba(" + mRgb + ", 0)");
+        ctx.fillStyle = columnGrad;
+        ctx.fillRect(moonX - 45, 0, 90, height * 0.52);
+      }
+
+      // C. Razor-sharp Moon Disk (Magnified considerably for grand presence)
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, moonRadius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Colored moon disk overlay
+      ctx.fillStyle = "rgba(" + mRgb + ", 0.22)";
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, moonRadius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // D. Far Mountains Silhouette and Rim Highlight
+      ctx.beginPath();
+      ctx.moveTo(0, height * 0.52);
+      ctx.lineTo(width * 0.08, height * 0.44);
+      ctx.lineTo(width * 0.15, height * 0.32); // Peak 1
+      ctx.lineTo(width * 0.22, height * 0.41);
+      ctx.lineTo(width * 0.28, height * 0.36); // Peak 2
+      ctx.lineTo(width * 0.35, height * 0.45);
+      ctx.lineTo(width * 0.42, height * 0.38); // Peak 3
+      ctx.lineTo(width * 0.50, height * 0.28); // Peak 4 (highest center left)
+      ctx.lineTo(width * 0.58, height * 0.39);
+      ctx.lineTo(width * 0.66, height * 0.32); // Peak 5
+      ctx.lineTo(width * 0.73, height * 0.42);
+      ctx.lineTo(width * 0.81, height * 0.26); // Peak 6
+      ctx.lineTo(width * 0.90, height * 0.44);
+      ctx.lineTo(width, height * 0.47);
+      ctx.lineTo(width, height * 0.521);
+      ctx.lineTo(0, height * 0.521);
+      
+      // Paint mountain body
+      ctx.fillStyle = "#050819";
+      ctx.fill();
+
+      // Golden/Cyan Rim Highlights matching selected moon color
+      if (glowOpacity > 0) {
+        ctx.strokeStyle = "rgba(" + mRgb + ", " + (0.55 * glowOpacity) + ")";
+        ctx.lineWidth = 2.0;
+        ctx.stroke();
+      }
+
+      // E. Near Mountains Silhouette and Rim Highlight
+      ctx.beginPath();
+      ctx.moveTo(0, height * 0.52);
+      ctx.lineTo(width * 0.05, height * 0.48);
+      ctx.lineTo(width * 0.12, height * 0.41); // Peak A
+      ctx.lineTo(width * 0.20, height * 0.47);
+      ctx.lineTo(width * 0.28, height * 0.43); // Peak B
+      ctx.lineTo(width * 0.38, height * 0.49);
+      ctx.lineTo(width * 0.48, height * 0.45); // Peak C
+      ctx.lineTo(width * 0.58, height * 0.38); // Peak D
+      ctx.lineTo(width * 0.68, height * 0.46);
+      ctx.lineTo(width * 0.78, height * 0.40); // Peak E
+      ctx.lineTo(width * 0.88, height * 0.48);
+      ctx.lineTo(width * 0.94, height * 0.44); // Peak F
+      ctx.lineTo(width, height * 0.52);
+      ctx.lineTo(width, height * 0.521);
+      ctx.lineTo(0, height * 0.521);
+
+      // Paint mountain body
+      ctx.fillStyle = "#02030a";
+      ctx.fill();
+
+      // Front mountain rim backlight
+      if (glowOpacity > 0) {
+        ctx.strokeStyle = "rgba(" + mRgb + ", " + (0.35 * glowOpacity) + ")";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+
+      // F. Pine Forests Silhouette on Horizon (Dense layered pine woods in beautiful dark green coloration)
+      const drawPine = function(px, py, pHeight) {
+        // Main body
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(px - pHeight * 0.24, py + pHeight);
+        ctx.lineTo(px + pHeight * 0.24, py + pHeight);
+        ctx.closePath();
+        ctx.fill();
+
+        // Shrub middle layers
+        ctx.beginPath();
+        ctx.moveTo(px, py + pHeight * 0.32);
+        ctx.lineTo(px - pHeight * 0.19, py + pHeight * 0.82);
+        ctx.lineTo(px + pHeight * 0.19, py + pHeight * 0.82);
+        ctx.closePath();
+        ctx.fill();
+
+        // Top layers
+        ctx.beginPath();
+        ctx.moveTo(px, py + pHeight * 0.6);
+        ctx.lineTo(px - pHeight * 0.14, py + pHeight * 0.9);
+        ctx.lineTo(px + pHeight * 0.14, py + pHeight * 0.9);
+        ctx.closePath();
+        ctx.fill();
+
+        // Stroke tiny forest tops with moon backlight
+        if (glowOpacity > 0) {
+          ctx.strokeStyle = "rgba(" + mRgb + ", " + (0.22 * glowOpacity) + ")";
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      };
+
+      // Taller, back layer of forest (Subtle dark pine green)
+      ctx.fillStyle = "#041007";
+      for (let i = 0; i < 35; i++) {
+        const pX = 4 + i * 6.2 + Math.sin(i * 3) * 1.8;
+        const pH = 18 + Math.abs(Math.cos(i * 1.7)) * 28;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+      for (let i = 0; i < 35; i++) {
+        const pX = width - 4 - i * 6.2 - Math.sin(i * 3) * 1.8;
+        const pH = 17 + Math.abs(Math.sin(i * 1.5)) * 28;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+
+      // Medium rich dark-green pine forest layer for spectacular density and lush depth!
+      ctx.fillStyle = "#0b2814";
+      for (let i = 0; i < 38; i++) {
+        const pX = 8 + i * 5.8 + Math.cos(i * 4.2) * 2.0;
+        const pH = 13 + Math.abs(Math.sin(i * 2.3)) * 20;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+      for (let i = 0; i < 38; i++) {
+        const pX = width - 8 - i * 5.8 - Math.cos(i * 4.2) * 2.0;
+        const pH = 12 + Math.abs(Math.cos(i * 2.1)) * 20;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+
+      // Shorter, denser front layer of forest with deep lush green coloration!
+      ctx.fillStyle = "#051b0b";
+      for (let i = 0; i < 28; i++) {
+        const pX = 12 + i * 8.5 + Math.cos(i * 5) * 3;
+        const pH = 9 + Math.abs(Math.sin(i * 2.1)) * 13;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+      for (let i = 0; i < 28; i++) {
+        const pX = width - 12 - i * 8.5 - Math.cos(i * 5) * 3;
+        const pH = 8 + Math.abs(Math.cos(i * 1.9)) * 13;
+        drawPine(pX, height * 0.52 - pH, pH);
+      }
+
+      // G. Beautiful Ambient Illuminated Lake Surface
+      const lakeGrad = ctx.createLinearGradient(0, height * 0.52, 0, height);
+      // Let the lake top have an gorgeous glowing bleed closest to the horizon line
+      lakeGrad.addColorStop(0, "rgba(" + mRgb + ", " + (0.25 * glowOpacity) + ")");
+      lakeGrad.addColorStop(0.12, "#040516");
+      lakeGrad.addColorStop(0.45, "#010207");
+      lakeGrad.addColorStop(1, "#000000");
+      ctx.fillStyle = lakeGrad;
+      ctx.fillRect(0, height * 0.52, width, height * 0.48);
+
+      // G.1. High-Fidelity Mirrored Reflections (Mountains, Moon & Forest)
+      const flipY = function(yVal) { return height * 0.52 + (height * 0.52 - yVal); };
+      ctx.save();
+      // Clip to lake boundaries for perfect water mask
+      ctx.beginPath();
+      ctx.rect(0, height * 0.52, width, height * 0.48);
+      ctx.clip();
+
+      // Reflect Far Mountains
+      ctx.beginPath();
+      ctx.moveTo(0, height * 0.52);
+      ctx.lineTo(width * 0.08, flipY(height * 0.44));
+      ctx.lineTo(width * 0.15, flipY(height * 0.32));
+      ctx.lineTo(width * 0.22, flipY(height * 0.41));
+      ctx.lineTo(width * 0.28, flipY(height * 0.36));
+      ctx.lineTo(width * 0.35, flipY(height * 0.45));
+      ctx.lineTo(width * 0.42, flipY(height * 0.38));
+      ctx.lineTo(width * 0.50, flipY(height * 0.28));
+      ctx.lineTo(width * 0.58, flipY(height * 0.39));
+      ctx.lineTo(width * 0.61, flipY(height * 0.32));
+      ctx.lineTo(width * 0.73, flipY(height * 0.42));
+      ctx.lineTo(width * 0.81, flipY(height * 0.26));
+      ctx.lineTo(width * 0.90, flipY(height * 0.44));
+      ctx.lineTo(width, flipY(height * 0.47));
+      ctx.lineTo(width, height * 0.52);
+      ctx.closePath();
+
+      const farRefGrad = ctx.createLinearGradient(0, height * 0.52, 0, height);
+      farRefGrad.addColorStop(0, "rgba(5, 8, 25, 0.35)");
+      farRefGrad.addColorStop(0.25, "rgba(5, 8, 25, 0.12)");
+      farRefGrad.addColorStop(0.7, "rgba(5, 8, 25, 0)");
+      ctx.fillStyle = farRefGrad;
+      ctx.fill();
+
+      // Reflect Near Mountains
+      ctx.beginPath();
+      ctx.moveTo(0, height * 0.52);
+      ctx.lineTo(width * 0.05, flipY(height * 0.48));
+      ctx.lineTo(width * 0.12, flipY(height * 0.41));
+      ctx.lineTo(width * 0.20, flipY(height * 0.47));
+      ctx.lineTo(width * 0.28, flipY(height * 0.43));
+      ctx.lineTo(width * 0.38, flipY(height * 0.49));
+      ctx.lineTo(width * 0.48, flipY(height * 0.45));
+      ctx.lineTo(width * 0.58, flipY(height * 0.38));
+      ctx.lineTo(width * 0.68, flipY(height * 0.46));
+      ctx.lineTo(width * 0.78, flipY(height * 0.40));
+      ctx.lineTo(width * 0.88, flipY(height * 0.48));
+      ctx.lineTo(width * 0.94, flipY(height * 0.44));
+      ctx.lineTo(width, height * 0.52);
+      ctx.closePath();
+
+      const nearRefGrad = ctx.createLinearGradient(0, height * 0.52, 0, height);
+      nearRefGrad.addColorStop(0, "rgba(2, 3, 10, 0.45)");
+      nearRefGrad.addColorStop(0.35, "rgba(2, 3, 10, 0.15)");
+      nearRefGrad.addColorStop(0.75, "rgba(2, 3, 10, 0)");
+      ctx.fillStyle = nearRefGrad;
+      ctx.fill();
+
+      // Reflect Pine Forests (Subtle dark green shoreline reflections)
+      ctx.fillStyle = "rgba(4, 20, 10, 0.28)";
+      const drawPineReflection = function(px, py, pHeight) {
+        ctx.beginPath();
+        ctx.moveTo(px, height * 0.52);
+        ctx.lineTo(px - pHeight * 0.18, height * 0.52 + pHeight * 0.45);
+        ctx.lineTo(px + pHeight * 0.18, height * 0.52 + pHeight * 0.45);
+        ctx.closePath();
+        ctx.fill();
+      };
+      for (let i = 0; i < 35; i++) {
+        const pX = 5 + i * 7.5 + Math.sin(i * 3) * 2;
+        const pH = 15 + Math.abs(Math.cos(i * 1.7)) * 24;
+        drawPineReflection(pX, height * 0.52, pH);
+      }
+      for (let i = 0; i < 35; i++) {
+        const pX = width - 5 - i * 7.5 - Math.sin(i * 3) * 2;
+        const pH = 14 + Math.abs(Math.sin(i * 1.5)) * 24;
+        drawPineReflection(pX, height * 0.52, pH);
+      }
+
+      // Reflect Majestic Moon on the Water Surface
+      const moonReflectY = flipY(moonY);
+      if (glowOpacity > 0) {
+        // Soft glowing outer aura mirror
+        const rMoonGrad = ctx.createRadialGradient(moonX, moonReflectY, 0, moonX, moonReflectY, moonRadius * 1.8);
+        rMoonGrad.addColorStop(0, "rgba(" + mRgb + ", " + (0.35 * glowOpacity) + ")");
+        rMoonGrad.addColorStop(0.4, "rgba(" + mRgb + ", " + (0.12 * glowOpacity) + ")");
+        rMoonGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = rMoonGrad;
+        ctx.beginPath();
+        ctx.arc(moonX, moonReflectY, moonRadius * 1.8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Moon disc core reflection
+        const rMoonCore = ctx.createRadialGradient(moonX, moonReflectY, 0, moonX, moonReflectY, moonRadius);
+        rMoonCore.addColorStop(0, "rgba(255, 255, 255, " + (0.45 * glowOpacity) + ")");
+        rMoonCore.addColorStop(0.5, "rgba(" + mRgb + ", " + (0.12 * glowOpacity) + ")");
+        rMoonCore.addColorStop(1, "rgba(255, 255, 255, 0)");
+        ctx.fillStyle = rMoonCore;
+        ctx.beginPath();
+        ctx.arc(moonX, moonReflectY, moonRadius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // G.2. Multi-Layer High-Fidelity Wave & Water Surface Ripples Texture
+      const totalTextureLines = 58;
+      for (let i = 0; i < totalTextureLines; i++) {
+        // High frequency ripple positions that drift and shift dynamically over time
+        const ry = height * 0.52 + ((i * 11.7 + Math.sin(i * 1.9 + time * 1.3) * 3) % (height * 0.48));
+        const distanceFactor = (ry - height * 0.52) / (height * 0.48); // Perspective scaling factor: 0 (horizon) to 1 (front)
+        
+        // Horizontal stretch gets wider and thicker as ripples come closer in perspective
+        const strokeLength = 35 + distanceFactor * 130 + Math.abs(Math.sin(i * 3.5 + time * 0.8)) * 30;
+        const strokeWidth = 0.5 + distanceFactor * 1.3;
+        
+        // Render 3 non-overlapping wavy segments per horizontal line for beautiful sparse water noise
+        const numSegments = 3;
+        for (let s = 0; s < numSegments; s++) {
+          const rx = (width / numSegments) * (s + 0.15) + Math.cos(i * 1.8 + time * 0.4) * 22;
+          
+          let shimmerAlpha = 0.08 + 0.12 * Math.sin(time * 2.4 + i * 1.4);
+          
+          // Boost shimmer highlight brightness along the main lunar focus column
+          const distToCenter = Math.abs(rx - width * 0.5);
+          if (distToCenter < width * 0.28) {
+            shimmerAlpha += (1 - distToCenter / (width * 0.28)) * 0.22;
+          }
+          
+          ctx.strokeStyle = "rgba(" + mRgb + ", " + shimmerAlpha * glowOpacity + ")";
+          ctx.lineWidth = strokeWidth * (0.85 + 0.15 * Math.sin(time + i));
+          ctx.beginPath();
+          ctx.moveTo(rx - strokeLength * 0.5, ry);
+          ctx.lineTo(rx + strokeLength * 0.5, ry);
+          ctx.stroke();
+        }
+      }
+      ctx.restore();
+
+      // H. Dynamic Rich Shimmering Liquid Lunar Reflection
+      const startRefY = height * 0.52;
+      for (let ry = startRefY; ry < height; ry += 3.0) {
+        const t = (ry - startRefY) / (height - startRefY);
+        const baseWidth = 32 + t * (width * 0.28);
+        
+        const waveS = Math.sin(ry * 0.15 - time * 3.6) * Math.cos(ry * 0.05 + time * 1.5);
+        const curWidth = baseWidth * (0.5 + 0.38 * Math.sin(ry * 0.08 + time * 1.8) + waveS * 0.25);
+
+        // Significantly brighter opacity and glow scaling for brilliant sparkling
+        let op = (1 - t * 0.4) * 0.85 * glowOpacity;
+        op *= (0.65 + 0.35 * Math.sin(ry * 0.2 + time * 4.2));
+
+        if (op > 0.01) {
+          // Broad glowing water pathway
+          ctx.strokeStyle = "rgba(" + mRgb + ", " + op + ")";
+          ctx.lineWidth = 2.4 + (1 - t) * 1.8;
+          ctx.beginPath();
+          ctx.moveTo(width * 0.5 - curWidth * 0.5, ry);
+          ctx.lineTo(width * 0.5 + curWidth * 0.5, ry);
+          ctx.stroke();
+
+          // Sparkly hot white center path with dynamic glitter
+          const coreW = curWidth * 0.32;
+          ctx.strokeStyle = "rgba(255, 255, 255, " + (op * 1.62) + ")";
+          ctx.lineWidth = 1.4;
+          ctx.beginPath();
+          ctx.moveTo(width * 0.5 - coreW * 0.5, ry);
+          ctx.lineTo(width * 0.5 + coreW * 0.5, ry);
+          ctx.stroke();
+        }
+      }
+
+      // Add secondary glints nearby for ultimate liquid ripple effect!
+      for (let i = 0; i < 15; i++) {
+        const ry = height * 0.55 + Math.abs(Math.sin(i * 7 + time * 2)) * (height * 0.4);
+        const rx = width * 0.5 + Math.sin(i * 3.8 + time) * (width * 0.18);
+        const rLen = 6 + Math.abs(Math.cos(i + time)) * 14;
+        const rOp = 0.25 * glowOpacity * (0.5 + 0.5 * Math.sin(time * 3 + i));
+        ctx.strokeStyle = "rgba(" + mRgb + ", " + rOp + ")";
+        ctx.lineWidth = 1.0;
+        ctx.beginPath();
+        ctx.moveTo(rx - rLen * 0.5, ry);
+        ctx.lineTo(rx + rLen * 0.5, ry);
+        ctx.stroke();
+      }
+
+      // 1. Estrelas Cintilantes (com efeito de cruz para as maiores)
+      stars.forEach(function(star) {
+        star.phase += star.twinkleSpeed;
+        const currentAlpha = star.alpha * (0.35 + Math.sin(star.phase) * 0.65);
+        ctx.fillStyle = "rgba(224, 242, 254, " + currentAlpha + ")";
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (star.size > 1.3 && currentAlpha > 0.6) {
+          ctx.strokeStyle = "rgba(56, 189, 248, " + (currentAlpha * 0.35) + ")";
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(star.x - 3, star.y);
+          ctx.lineTo(star.x + 3, star.y);
+          ctx.moveTo(star.x, star.y - 3);
+          ctx.lineTo(star.x, star.y + 3);
+          ctx.stroke();
+        }
+      });
+
+      // 2. Cronômetro de Estrelas Cadentes Automáticas
+      autoShootingStarTimer++;
+      if (autoShootingStarTimer > 400 + Math.random() * 450) {
+        spawnShootingStar();
+        autoShootingStarTimer = 0;
+      }
+
+      // 3. Estrelas Cadentes Ativas
+      shootingStars = shootingStars.filter(function(star) {
+        ctx.strokeStyle = "rgba(255, 255, 255, " + star.alpha + ")";
+        ctx.lineWidth = star.thickness;
+        ctx.beginPath();
+        ctx.moveTo(star.x, star.y);
+        ctx.lineTo(star.x - Math.cos(star.angle) * star.length, star.y - Math.sin(star.angle) * star.length);
+        ctx.stroke();
+
+        star.x += Math.cos(star.angle) * star.speed;
+        star.y += Math.sin(star.angle) * star.speed;
+        star.alpha -= 0.025;
+
+        return star.alpha > 0 && star.x > -100 && star.x < width + 100 && star.y < height + 100;
+      });
+
+      // 4. Ondas do Lago (Perspectiva Elíptica Achatada + Anéis Internos)
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, height * 0.52, width, height * 0.48);
+      ctx.clip();
+
+      ripples = ripples.filter(function(ripple) {
+        ctx.strokeStyle = "rgba(" + ripple.color + ", " + (ripple.alpha * ripple.strength) + ")";
+        ctx.lineWidth = Math.max(0.6, 1.6 * ripple.alpha * ripple.strength);
+
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(ripple.x, ripple.y);
+        ctx.scale(1.0, 0.28);
+        ctx.arc(0, 0, ripple.radius, 0, Math.PI * 2);
+        ctx.restore();
+        ctx.stroke();
+
+        // Anel interno sutil
+        if (ripple.radius > 15) {
+          ctx.strokeStyle = "rgba(" + ripple.color + ", " + (0.07 * ripple.alpha * ripple.strength) + ")";
+          ctx.beginPath();
+          ctx.save();
+          ctx.translate(ripple.x, ripple.y);
+          ctx.scale(1.0, 0.28);
+          ctx.arc(0, 0, ripple.radius - 12, 0, Math.PI * 2);
+          ctx.restore();
+          ctx.stroke();
+        }
+
+        ripple.radius += 0.8 + (1.2 * ripple.strength);
+        ripple.alpha -= 0.006 * (2 - ripple.strength);
+        return ripple.alpha > 0;
+      });
+      ctx.restore();
+
+      // 5. Vagalumes Interativos (Swaying + Medo de Cursor)
+      fireflies.forEach(function(ff) {
+        ff.phase += ff.speed;
+        const driftX = Math.sin(ff.phase) * 0.55;
+        ff.x += ff.vx + driftX;
+        ff.y += ff.vy;
+
+        if (mouse.x > 0) {
+          const dx = ff.x - mouse.x;
+          const dy = ff.y - mouse.y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 100) {
+            const force = (100 - dist) / 1000;
+            ff.x += dx * force;
+            ff.y += dy * force;
+          }
+        }
+
+        if (ff.y < -10) {
+          ff.y = height + 10;
+          ff.x = Math.random() * width;
+        }
+        if (ff.x < -10) ff.x = width + 10;
+        if (ff.x > width + 10) ff.x = -10;
+
+        const currentAlpha = ff.alpha * (0.4 + Math.sin(ff.phase) * 0.6);
+
+        if (currentAlpha > 0) {
+          ctx.beginPath();
+          const radial = ctx.createRadialGradient(ff.x, ff.y, 1, ff.x, ff.y, ff.size * 3.5);
+          
+          let glowColorRGB = "245, 158, 11"; // dourado
+          if (fireflyColorSign === "cyan") glowColorRGB = "56, 189, 248";
+          else if (fireflyColorSign === "purple") glowColorRGB = "168, 85, 247";
+          else if (fireflyColorSign === "green") glowColorRGB = "16, 185, 129";
+          else if (fireflyColorSign === "red") glowColorRGB = "239, 68, 68";
+          else if (fireflyColorSign === "mixed") glowColorRGB = ff.hue === 43 ? "245, 158, 11" : "56, 189, 248";
+
+          radial.addColorStop(0, "rgba(" + glowColorRGB + ", " + (currentAlpha * 0.55) + ")");
+          radial.addColorStop(0.4, "rgba(" + glowColorRGB + ", " + (currentAlpha * 0.2) + ")");
+          radial.addColorStop(1, "rgba(" + glowColorRGB + ", 0)");
+          
+          ctx.fillStyle = radial;
+          ctx.arc(ff.x, ff.y, ff.size * 3.5, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255, 255, 255, " + currentAlpha + ")";
+          ctx.arc(ff.x, ff.y, ff.size * 0.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      // 6. Halo Luminoso de Feedback no Cursor Mouse
+      if (mouse.x > 0) {
+        const pointerGrad = ctx.createRadialGradient(mouse.x, mouse.y, 1, mouse.x, mouse.y, mouse.hoverInLake ? 50 : 25);
+        let col = "245, 158, 11";
+        if (mouse.hoverInLake) {
+          col = "14, 165, 233"; // azul laguna
+        } else {
+          if (fireflyColorSign === "cyan") col = "56, 189, 248";
+          else if (fireflyColorSign === "purple") col = "168, 85, 247";
+          else if (fireflyColorSign === "green") col = "16, 185, 129";
+          else if (fireflyColorSign === "red") col = "239, 68, 68";
+        }
+        pointerGrad.addColorStop(0, "rgba(" + col + ", 0.2)");
+        pointerGrad.addColorStop(1, "rgba(" + col + ", 0)");
+        
+        ctx.fillStyle = pointerGrad;
+         ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, mouse.hoverInLake ? 55 : 30, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      requestAnimationFrame(draw);
+    };
+
+    if (typeof ResizeObserver !== 'undefined') {
+      const observer = new ResizeObserver(function() {
+        resize();
+      });
+      observer.observe(section);
+    } else {
+      window.addEventListener('resize', resize);
+    }
+
+    resize();
+    draw();
+  });
+})();
+</script>
